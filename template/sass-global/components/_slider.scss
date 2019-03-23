@@ -1,0 +1,199 @@
+/* PrimeNG Slider SCSS */
+
+nouislider .noUi-horizontal .noUi-handle {
+  border: none;
+  box-shadow: none;
+}
+
+.slider-value {
+  color: $primary;
+}
+
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin-top: 1rem;
+  //background-color: #e6e6e6;
+  //border-color: #e6e6e6;
+  .ui-slider-horizontal .ui-slider-handle {
+    top: -0.75em;
+  }
+  .ui-slider-vertical .ui-slider-handle {
+    left: -.2em;
+  }
+  .ui-slider-handle { //create mixin
+    background-color: #999;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+    z-index: 1;
+    .ui-slider-handle-active {
+      z-index: 2;
+    }
+    &:hover {
+      background-color: #999;
+    }
+  }
+  .ui-slider-animate .ui-slider-handle { // create mixin
+    transition: background-color 0.3s,left 0.3s;
+    -moz-transition: background-color 0.3s,left 0.3s;
+    -o-transition: background-color 0.3s,left 0.3s;
+    -webkit-transition: background-color 0.3s,left 0.3s;
+  }
+
+  .ui-slider-range {
+    position: absolute;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+    background: #FA9E39;
+  }
+}
+
+.ui-slider-horizontal {
+  height: .5em;
+  .ui-slider-handle {
+    top: -11px; //-.25em
+    margin-left: -14px; //-.6em
+  }
+  .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-range-min {
+    left: 0;
+  }
+  .ui-slider-range-max {
+    right: 0;
+  }
+}
+
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px;
+  .ui-slider-handle {
+    left: -.25em;
+    margin-left: 0;
+    margin-bottom: -.6em;
+  }
+  .ui-slider-range {
+    left: 0;
+    width: 100%;
+  }
+  .ui-slider-range-min {
+    bottom: 0;
+  }
+  .ui-slider-range-max {
+    top: 0;
+  }
+}
+
+/*.ui-widget {
+  .ui-widget,
+  input,
+  select,
+  textarea,
+  button {
+    //font-family: $font-family;
+    //text-decoration: none;
+    //font-size: 1em;
+  }
+}*/
+
+.ui-widget-content {
+  background-color: $sliderBG;
+  border: 0;
+}
+.ui-widget-header {
+  background: #ffffff;
+  color: #2d353c;
+  border: 1px solid #cdcdcd;
+}
+
+.ui-corner-all {
+  border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+}
+
+/* CSS to add tick markers to primeng Slider */
+
+.slider-ticks {
+  position: relative;
+  box-sizing: border-box;
+  height: 0;
+  padding: 0;
+  left: 0;
+  margin-top: 8px;
+  margin-left: 0.7rem;
+  margin-bottom: 2rem;
+  margin-right: 0.7rem;
+  color: #999;
+}
+.tick-marker {
+  background: #ccc;
+  margin-left: -1px;
+  width: 2px;
+  position: absolute;
+}
+.tick-marker-normal {
+  height: 5px;
+}
+.tick-marker-large {
+  height: 7px;
+}
+.tick-value {
+  font-size: 12px;
+  transform: translate(-60%,35%);
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+$elements: 5;
+@for $i from 0 to $elements {
+  .tick-marker:nth-child(#{$i + 2}) {
+    left: $i * 25%;
+  }
+}
+
+.noUi-marker-horizontal {
+  .noUi-marker-large {
+    height: 7px;
+    background: #ccc;
+  }
+  .noUi-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+  }
+
+}
+.noUi-marker {
+  position: absolute;
+  background: #ccc;
+}
+.noUi-value-horizontal {
+  transform: translate(-50%,50%);
+}
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 12px;
+}

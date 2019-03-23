@@ -1,0 +1,48 @@
+
+$blue:            #0A529E;
+//$indigo:        #6610f2;
+//$purple:        #6f42c1;
+$pink:            #ef8ab4;
+$red:             #CC3300;
+$orange:          #FF3300;
+//$yellow:        #ffc107;
+$green:           #92BC37;
+$teal:            #538f94;
+//$cyan:          #17a2b8;
+
+$lightgreen:      #92BC37;
+$brightgreen:     #658e0e;
+$darkgreen:       #3c5407;
+
+
+
+//----- Additional custom colors ------
+$brightgreen:     #92BC37 !default;
+$danger-light:    #EABABE !default;
+
+//----- Theme colors for bootstrap inheritance ------
+$theme-colors: (
+  'primary':    $red,
+  'secondary':  $orange,
+  'success':    $darkgreen,
+  'info':       $teal,
+  'warning':    $red
+);
+
+//----- Theme colors for local variable ------
+$primary:         $green;
+$secondary:       $orange;
+$success:         $darkgreen;
+$info:            $teal;
+$warning:         $red;
+
+//----- Grays ------
+$gray-100:        #eee;
+$gray-200:        #bfbeb7; //
+$gray-300:        #9b9b9b;
+$gray-400:        #fcfcfc;
+$gray-500:        #e4e4e4;
+$gray-700:        #666;
+$gray-800:        #545358;
+$gray-900:        #333;
+

@@ -1,0 +1,291 @@
+
+/*!
+* Client: Autonation
+*/
+
+//aside {
+//  padding:      0 0 $spacer 0 !important;
+//}
+
+.alert {
+  margin-top:   $spacer !important;
+}
+
+h5 {
+  margin-bottom: .75rem;
+}
+
+a.meta {
+  color: $secondary;
+  font-size: $font-size-base;
+}
+
+small>a {
+  font-size: $font-size-sm;
+  color: $gray-700;
+}
+
+p .card-text small {
+  color: $gray-500 !important;
+}
+
+
+  #not-me-btn {
+  color: $not-me-link-color;
+  text-decoration: underline;
+  margin: $not-me-margin;
+  position:absolute;
+  right: .5rem;
+}
+
+
+#main {
+  position: relative;
+  padding-top: $spacer * 1.5;
+  // border-bottom: 1px solid $gray-100;
+  &::after {
+    content: "";
+    background: $headings-bg;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+  }
+  h1 {
+    text-transform: capitalize;
+    font-weight: $font-weight-bold;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  h2 {
+    word-wrap: break-word;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: $font-weight-light;
+    color: $black;
+  }
+}
+
+#terminate {
+  h1 {
+    margin-top: $spacer*1.5 !important;
+    margin-bottom: $spacer;
+  }
+  p {
+    padding: 0 20px;
+  }
+}
+
+.mainContent{
+  h4 {
+    margin-top: $spacer/2;
+    color: $secondary;
+    font-size: $h4-font-size;
+    font-weight:normal;
+  }
+}
+
+#offerId {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+#offer {
+  .masthead {
+    background: url($imgPath + '/hero.jpg') no-repeat top center;
+    background-size: cover;
+    position: relative;
+    min-height: calc(100vh - 318px);
+    h1 {
+      font-size: $font-size-xl;
+      margin: 185px auto 0 auto;
+      color: $secondary;
+    }
+    p {
+      word-wrap: break-word;
+      color: $gray-500;
+      font-size: $font-size-sm;
+      padding:4pt;
+      &.lead {
+        margin-top: 0;
+        font-size: $font-size-lg;
+        font-weight: 400;
+      }
+    }
+
+    .meta {
+      color: $gray-500;
+      font-size: $font-size-sm;
+      margin-top: 15px;
+    }
+  }
+  .expiry-date {
+    color: $gray-500 !important;
+    font-size: $font-size-sm !important;
+    padding:4pt !important;
+  }
+
+  .block {
+    background: transparentize($success, 0);
+    padding: 15px;
+    margin: 20px -15px 10px;
+    color: $gray-500;
+    text-align: center;
+    p {
+      color: #ffffff;
+      font-size: $font-size-lg;
+      line-height: 28pt;
+      padding: 0 15px;
+      margin-bottom: 0rem;
+    }
+  }
+
+  #prequalCheckList {
+    text-align: left;
+    color: white;
+    display: inline-block;
+    .checkRow {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 15px;
+      .checkCircle {
+        border: 1px solid $white;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        display: inline-flex;
+        text-align: center;
+        float: left;
+        .fa {
+          color: $secondary;
+          font-size: $font-size-lg;
+          padding: 7px;
+        }
+      }
+      p {
+        display: inline-flex;
+        width: calc(100% - 48px);
+        margin: 0 0 0 8px;
+        font-size: $font-size-sm;
+        font-weight: 300;
+        float: left;
+      }
+    }
+  }
+}
+
+hr {
+  margin: 0 !important
+}
+
+small#ssn-errors {
+  color: $danger;
+  padding: 5px 10px;
+  margin: 4px 1px;
+  outline: 1px $danger solid;
+  background-color: $danger-light;
+  font-size: $font-size-sm;
+  line-height: 14pt;
+  display: block;
+}
+
+#tnc {
+  border-top: 1px solid rgba(0,0,0,.1);
+  a {
+      color: $brightgreen;
+  }
+}
+
+
+
+/* HEADER BAR STYLES */
+
+
+
+section#hero {
+  .btn-secondary {
+    @include button-variant(transparent, $white, $white, $white, $white, $white);
+    margin-top: -15pt;
+  }
+}
+
+.btn-block+.btn-block {
+  margin-top: $spacer !important;
+}
+
+.btn-group {
+  width: 100%;
+}
+
+.btn-primary {
+  @include gradient-y($secondary,$warning)
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+  #offer {
+    .masthead {
+      .meta {
+        bottom: auto;
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #offer {
+    .block {
+      .offerAmt {
+        font-size: $font-size-base !important;
+        height: 90px;
+        width: 90px;
+        &:nth-child(2) {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+/* OFFER */
+
+#offer {
+  background-color: #F0F0F0 !important;
+}
+
+#offer {
+  position: relative;
+  .active {
+    color: #000000;
+    text-transform: uppercase;
+  }
+  h1 {
+    //font-size: 22pt;
+    //color: $brightgreen;
+    //font-weight: 500;
+    //padding: 0px 0px 5px;
+    //margin: 5pt 0pt 5pt;
+    //line-height: 24pt;
+    strong {
+      color: $brightgreen;
+      font-weight: bold;
+      font-size:18pt;
+    }
+  }
+  .lead {
+    //margin-bottom: 0em !important;
+  }
+  a {
+    text-decoration: underline;
+    color: $brightgreen !important;
+    font-size: 16px;
+  }
+}

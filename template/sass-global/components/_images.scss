@@ -1,0 +1,16 @@
+
+//Confirmation.component Page Image Styles
+
+#emailImg     {background-image: url($imgPath + "/icon-mail.png");}
+#successImg   {background-image: url($imgPath + "/icon-check.png");}
+
+.alertImg {
+  height: 130px;
+  width: 130px;
+  display: block;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: 63%;
+  border-radius: 50%;
+  background-position: 38% 50%;
+}

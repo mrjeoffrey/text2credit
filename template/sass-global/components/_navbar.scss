@@ -1,0 +1,25 @@
+
+/* ==========================================
+* HEADER & LOGO properties */
+
+.navbar {
+  border-bottom:          $navbar-border;
+  background:             $navbar-bg-image;
+  background-size:        cover;
+  position:               relative;
+  min-height:             60px;
+  max-height:             60px;
+  z-index: 1;
+  .navbar-brand {
+    background-image:     url($imgPath + '/logo.png');
+    width:                $navbar-brand-width;
+    height:               $navbar-brand-height;
+    display:              block;
+    background-position:  center;
+    background-size:      contain;
+    background-repeat:    no-repeat;
+    line-height:          inherit;
+    white-space:          nowrap;
+    margin:               0 auto;
+  }
+}

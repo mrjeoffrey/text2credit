@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>INTRO - Text4Credit Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link type="text/css" rel="stylesheet" href="../dist/css/bootstrap.css"> -->
+  <link type="text/css" rel="stylesheet" href="../clients/loanme/styles.css">
+  <!-- <link type="text/css" rel="stylesheet" href="../clients/autonation/styles.css"> -->
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="container-fluid navbar" id="navbar">
+    <div alt="Logo" class="navbar-brand"></div>
+    <a class="btn btn-sm" id="not-me-btn">Not me?</a>
+    <a accesskey="0" class="sr-only sr-only-focusable" tabindex="0">Skip to Content</a>
+  </div>
+  <!-- Content Container -->
+  <section class="container-fluid" id="main" role="main">
+
+    <!-- CONTENT -->
+    <div class="row justify-content-center" id="welcome">
+      <div class="col-md-8 col-lg-5 text-center">
+        <h1 class="greeting">Hi, Michael West!</h1>
+        <h2>Let's find out what personal loan offers are available to you.</h2>
+      </div>
+    </div>
+
+    <!-- FORM Field-->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-5">
+
+        <form autocomplete="off" class="content ng-untouched ng-pristine ng-invalid" novalidate="" role="form" ng-reflect-form="[object Object]">
+
+          <div class="form-group mt-3" formgroupname="verification">
+            <label for="ssn" aria-label=" Required" class="col-form-label">
+              Last four digits of SSN
+              <em class="abbr" placement="right" title="Required Field" triggers="manual" ng-reflect-placement="right" ng-reflect-triggers="manual" ng-reflect-ngb-tooltip="[object Object]">*</em>
+            </label>
+
+            <input addattr="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="ssn" id="ssn" placeholder="####" type="password" ng-reflect-text-mask-config="[object Object]" ng-reflect-name="ssn" aria-describedby="ssn-help"
+              name="hideSsn" aria-invalid="true">
+            </input>
+
+            <div id="ssn-help" class="sr-only">Please provide your SSN.</div>
+
+          </div>
+
+          <div class="invalid-feedback" id="ssn-errors" aria-describedby="ssn-errors"> Please provide last four digits of your SSN.
+          </div>
+
+          <!-- DISCLOSURE -->
+          <p id="disclosure" role="complimentary">
+            By clicking “Continue” I hereby authorize LoanMe, Inc. to run my credit. I understand that by clicking the button immediately following this notice, I am providing “written instructions” to
+            LoanMe, Inc. under the Fair Credit Reporting Act authorizing LoanMe, Inc. to obtain information from my personal credit profile or other information from Experian. I authorize LoanMe, Inc. to obtain such information solely to
+            prequalify me for a loan product.
+          </p>
+
+          <button class="btn btn-primary btn-lg btn-block mb-3" id="primary" aria-label="Continue to pre-qualify" aria-pressed="false" type="submit">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- TERMS & PRIVACY -->
+    <div class="row justify-content-md-center clearfix pt-3" id="tnc">
+      <div class="col-md-8 col-lg-5">
+
+        <a href="#" class="float-left">Terms of Use</a>
+        <a href="#" class="float-right">Privacy Policy</a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div class="container-fluid" id="footer">
+
+    <div class="row">
+      <div class="col mx-auto text-center">
+        <p id="copyright"><b>© 2018 LoanMe, Inc.</b>
+          <br>All Rights Reserved.
+          <br>Located at 1900 S. State College Boulevard, Suite 300, Anaheim, CA 92806.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

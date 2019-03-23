@@ -1,0 +1,41 @@
+
+/* ==========================================
+* FOOTER STYLES */
+
+#terms {
+  background-color: $footer-terms-bg;
+  margin: $footer-terms-margin;
+  display: block;
+  a {
+    font-size: $footer-link-size;
+    line-height: $footer-link-line-height;
+    display: block;
+    text-decoration: $footer-link-text-decor !important;
+    color: $footer-link-color !important;
+    cursor: pointer;
+  }
+}
+
+#footer {
+  // margin-top: $footer-margin-top;
+  padding-top: $footer-padding-top;
+  background-color: $footer-bg;
+  border-top: $footer-border-top;
+  #copyright {
+    line-height: $footer-copyright-line-height;
+    color: $footer-copyright-color;
+    font-size: $footer-copyright-size;
+    font-weight: $footer-copyright-font-weight;
+    margin: $footer-margin;
+  }
+  #footerLogo {
+    height: $footer-img-height;
+    width: $footer-img-width;
+    display: block;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: $footer-img-path;
+    margin: 0.9rem auto 1.3rem;
+  }
+}

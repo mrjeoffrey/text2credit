@@ -1,0 +1,16 @@
+@import "../components/radio_checkbox";
+
+#preciseId {
+  .col-form-label {
+    text-transform: none;
+    position: relative;
+  }
+  .is-invalid {
+    .col-form-label {
+      color: $danger;
+    }
+  }
+  .form-check-label {
+    color: inherit;
+  }
+}

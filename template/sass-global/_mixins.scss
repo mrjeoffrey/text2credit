@@ -1,0 +1,41 @@
+//Global mixins
+@mixin box-shadow($type, $horiz, $vert, $blur, $spread, $color) {
+  -moz-box-shadow: $type $horiz $vert $blur $spread $color;
+  -webkit-box-shadow: $type $horiz $vert $blur $spread $color;
+  box-shadow: $type $horiz $vert $blur $spread $color;
+}
+
+@mixin linear-gradient($degrees, $color1, $color2) {
+   background: -moz-linear-gradient(top, $color1 0%, $color2 100%) !important;
+   /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, $color1), color-stop(50%, $color2)) !important;
+   /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top, $color1 0%, $color2 100%) !important;
+   /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top, $color1 0%, $color2 100%) !important;
+   /* Opera 11.10+ */
+   background: -ms-linear-gradient(top, $color1 0%, $color2 100%) !important;
+   /* IE10+ */
+   background: -webkit-gradient(linear, left top, left bottom, from($secondary), to($color2)) !important;
+   background: linear-gradient(to bottom, $color1 0%, $color2 100%) !important;
+   /* W3C */
+
+}
+
+@mixin transition($what, $seconds, $how) {
+  -webkit-transition: $what $seconds $how;
+  -o-transition: $what $seconds $how;
+  transition: $what $seconds $how;
+}
+
+@mixin transform-translate-y($percent) {
+  -webkit-transform: translateY($percent);
+  -ms-transform: translateY($percent);
+  transform: translateY($percent);
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+

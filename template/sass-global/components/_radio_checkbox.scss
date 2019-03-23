@@ -1,0 +1,86 @@
+// -------- Material Checkbox & Radio Styles --------
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px $md-radio-ripple-size rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px $md-radio-ripple-size rgba(0, 0, 0, 0);
+  }
+}
+
+.card {
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.form-group label.radio-inline-label {
+  position: initial !important;
+  display: block;
+  padding-top: calc(0.375rem + 1px);
+}
+.form-radio,
+.form-check {
+  margin: 10px 0;
+  padding-left: 1.25rem;
+  &.form-check-inline {
+    display: inline-block;
+    padding-left: 0;
+  }
+  input[type="radio"].form-check-input,
+  input[type="checkbox"].form-check-input {
+    display: none;
+    &:checked + label:before {
+      border-color: $primary;
+      animation: ripple 0.2s linear forwards;
+    }
+    &:checked + label:after {
+      transform: scale(1);
+    }
+  }
+  label.form-check-label {
+    display: inline-block;
+    //height: 20px;
+    position: relative;
+    padding: 0 ($md-radio-size + 10px);
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    top: 0;
+    width: 100%;
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      transition: all .3s ease;
+      transition-property: transform, border-color;
+    }
+    &:before {
+      left: 0;
+      top: 0;
+      width: $md-radio-size;
+      height: $md-radio-size;
+      border: 2px solid $gray-500;
+    }
+    &:after {
+      top: $md-radio-size / 2 - $md-radio-checked-size / 2;
+      left: $md-radio-size / 2 - $md-radio-checked-size / 2;
+      width:$md-radio-checked-size;
+      height:$md-radio-checked-size;
+      transform: scale(0);
+      background: $primary;
+    }
+  }
+}
+.form-check {
+  label.form-check-label {
+    &:before, &:after {
+      border-radius: 0%;
+    }
+  }
+}

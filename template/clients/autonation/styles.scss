@@ -1,0 +1,90 @@
+@import "sass/color-overrides";  //AutoNation custom colors // this must be first
+
+/* import the necessary Bootstrap files */
+@import "../../scss/functions";
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+/* import custom client files */
+
+@import "sass/variables";       // AutoNation-bootstrap variables
+
+/* import core variables and mixins with grid */
+
+@import "../../scss/root";
+@import "../../scss/reboot";
+@import "../../scss/type";
+// @import "../../scss/images";
+@import "../../scss/code";
+@import "../../scss/grid";
+
+// *** Standards
+
+//@import "../../scss/tables";
+@import "../../scss/forms";        //if commented, using _material_forms.scss
+@import "../../scss/buttons";
+
+// *** Components
+// @import "transitions";
+// @import "dropdown";
+@import "../../scss/button-group";
+@import "../../scss/input-group";
+@import "../../scss/custom-forms"; //if commented, using _material_forms.scss
+// @import "nav";
+@import "../../scss/navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+
+// *** Components w/ JavaScript
+// @import "modal";
+@import "../../scss/tooltip";
+// @import "popover";
+// @import "carousel";
+
+// *** Utility classes
+@import "../../scss/utilities/align";
+@import "../../scss/utilities/background";
+// @import "../../scss/utilities/borders";
+// @import "../../scss/utilities/clearfix";
+
+@import "../../scss/utilities/display";
+// @import "../../scss/utilities/embed";
+@import "../../scss/utilities/flex";
+@import "../../scss/utilities/float";
+@import "../../scss/utilities/position";
+@import "../../scss/utilities/screenreaders";
+@import "../../scss/utilities/spacing";
+@import "../../scss/utilities/text";
+@import "../../scss/utilities/visibility";
+
+// *** Print classes
+//@import "print";
+
+/* -------begin customization-------- */
+
+@import "../../sass-global/global";             // Structural mobile prequal global styles
+@import "sass/custom";                           // client custom Sass
+@import "../../sass-global/components/navbar";  // Navbar
+@import "../../sass-global/components/footer";  // Footer
+//@import "../../sass-global/components/slider";  // Slider
+@import "../../sass-global/components/loader";  // Loader
+@import "../../sass-global/components/icons";   // Icons like show/hide
+//@import "../../sass-global/components/images";  // Images
+//@import "../../sass-global/components/material_forms";   // Material Form Label
+@import "../../sass-global/components/forms";   // Form Label; if commented, using _material_forms.scss
+
+/* ------product addons ------------*/
+
+@import "../../sass-global/addons/moreinfo";    // More Info
+//@import "../../scss/addons/preciseid";   // Precise ID
+//@import "../../scss/addons/shift";   // Precise ID
+
+/* -------end customization-------- */

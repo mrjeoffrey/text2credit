@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>NOT ME - Text4Credit Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link type="text/css" rel="stylesheet" href="../dist/css/bootstrap.css"> -->
+  <link type="text/css" rel="stylesheet" href="../clients/loanme/styles.css">
+  <!-- <link type="text/css" rel="stylesheet" href="../clients/autonation/styles.css"> -->
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="container-fluid navbar" id="navbar">
+    <div alt="Logo" class="navbar-brand"></div>
+    <a accesskey="0" class="sr-only sr-only-focusable" tabindex="0">Skip to Content</a>
+  </div>
+  <!-- Content Container -->
+  <section class="container-fluid" id="main" role="main">
+    <!-- #main previously known as #mainContent -->
+
+    <!-- CONTENT -->
+    <div class="row justify-content-center" id="not-me">
+      <div class="col-md-8 col-lg-5 text-center">
+        <h1 class="greetings">Hello!</h1>
+        <h2>Help us accurately identify you.</h2>
+      </div>
+    </div>
+
+    <!-- FORM Field -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-5">
+
+        <form autocomplete="off" class="ng-untouched ng-pristine ng-invalid" novalidate="" role="form" ng-reflect-form="[object Object]">
+
+          <div class="form-group mt-3" formgroupname="verification">
+            <div class="form-row justify-content-center">
+
+              <div class="col-sm-6 col-md-4 form-group">
+                <label class="col-form-label" for="fname" aria-label="Required">First Name <em class="abbr" placement="right" title="Required Field" triggers="manual" ng-reflect-placement="right" ng-reflect-triggers="manual" ng-reflect-ngb-tooltip="[object Object]">*</em>
+                </label>
+                <input addattr="" id="fname" textonly="" type="text" ng-reflect-form="[object Object]" aria-describedby="fname-help" name="fname" class="form-control ng-untouched ng-pristine ng-invalid" aria-invalid="true">
+                <div id="fname-help" class="sr-only">Please provide your SSN.</div>
+                </input>
+
+                <div class="invalid-feedback" id="fname-errors" aria-describedby="fname-errors"> Please provide your first name.</div>
+              </div>
+
+              <div class="col-sm-6 col-md-4 form-group">
+                <label for="lname" aria-label=" Required" class="col-form-label">Last Name
+                  <em class="abbr" placement="right" title="Required Field" triggers="manual" ng-reflect-placement="right" ng-reflect-triggers="manual" ng-reflect-ngb-tooltip="[object Object]">*</em></label><input addattr="" id="lname" textonly=""
+                  type="text" ng-reflect-form="[object Object]" aria-describedby="lname-help" name="lname" class="form-control ng-untouched ng-pristine ng-invalid" aria-invalid="true"><small id="lname-help" class="sr-only">Please
+                  provide your .</small></input>
+                <div class="invalid-feedback" aria-describedby="lname-errors"> Please provide your last name. </div>
+              </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+
+              <div class="col-sm-6 col-md-4 form-group">
+                <label for="zip" aria-label=" Required" class="col-form-label">Zip Code
+                  <em class="abbr" placement="right" title="Required Field" triggers="manual" ng-reflect-placement="right" ng-reflect-triggers="manual" ng-reflect-ngb-tooltip="[object Object]">*</em></label>
+                <input addattr="" id="zip" minlength="5" placeholder="#####" type="tel" ng-reflect-minlength="5" ng-reflect-text-mask-config="[object Object]" ng-reflect-form="[object Object]" aria-describedby="zip-help" name="zip" class="form-control ng-untouched ng-pristine ng-invalid"
+                  aria-invalid="true">
+                <div id="zip-help" class="sr-only">Please provide your .</div>
+                </input>
+                <div class="invalid-feedback" id="zip-errors" aria-describedby="zip-errors"> Please provide your zip code. </div>
+              </div>
+
+              <div class="col-sm-6 col-md-4 form-group">
+                <label for="ssn" aria-label=" Required" class="col-form-label">Last four digits of SSN
+                  <em class="abbr" placement="right" title="Required Field" triggers="manual" ng-reflect-placement="right" ng-reflect-triggers="manual" ng-reflect-ngb-tooltip="[object Object]">*</em>
+                </label>
+                <input addattr="" class="showhidessn form-control ng-untouched ng-pristine ng-invalid" id="ssn" placeholder="####" type="tel" ng-reflect-text-mask-config="[object Object]" ng-reflect-form="[object Object]" aria-describedby="ssn-help"
+                  name="hideSsn" aria-invalid="true">
+                <div id="ssn-help" class="sr-only">Please provide your SSN.</div>
+                </input>
+                <div class="embedded-button"><button aria-pressed="false" tabindex="-1" type="button">
+                  </button>
+                  <div class="sr-only" id="showhidessn">Click to show or hide your ssn</div>
+                </div>
+                <div class="invalid-feedback" id="ssn-errors" aria-describedby="ssn-errors"> Please provide last four digits of your ssn.</div>
+
+              </div>
+            </div>
+
+
+            <p id="disclosure" role="complimentary">By clicking “Continue” I hereby authorize LoanMe, Inc. to run my credit. I understand that by clicking the button immediately following this notice, I am providing “written instructions” to LoanMe,
+              Inc. under the Fair Credit Reporting Act authorizing LoanMe, Inc. to obtain information from my personal credit profile or other information from Experian. I authorize LoanMe, Inc. to obtain such information solely to prequalify me for
+              a loan product.</p>
+
+            <button class="btn btn-primary btn-lg btn-block mb-3" id="primary" aria-label="Continue to pre-qualify" aria-pressed="false" type="submit">
+              Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- TERMS & PRIVACY -->
+    <div class="row justify-content-md-center clearfix pt-3" id="tnc">
+      <div class="col-md-8 col-lg-5">
+
+        <a href="#" class="float-left">Terms of Use</a>
+        <a href="#" class="float-right">Privacy Policy</a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div class="container-fluid" id="footer">
+
+    <div class="row">
+      <div class="col mx-auto text-center">
+        <p id="copyright"><b>© 2018 LoanMe, Inc.</b>
+          <br>All Rights Reserved.
+          <br>Located at 1900 S. State College Boulevard, Suite 300, Anaheim, CA 92806.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+
+body { // These attributes override SHIFT's dynamically added attributes which disable page scrolling
+  display:          flex;
+  min-height:       auto !important;
+  min-height:       100vh !important;
+  flex-direction:   column;
+  position:         relative;
+  overflow:         auto;
+  //background-color: $body-bg;
+  //font-family:      $font-family;
+  font-weight:      $font-weight-base;
+  letter-spacing:   $font-spacing-base;
+}
+
+// Measures height of view minus browser bar height for mobile devices
+#main {
+  // Default browser height - no browser bar height subtracted
+  min-height: $main-content-height;
+}
+
+/* ==========================================
+* HEADING STYLES */
+
+header {
+  text-align: $heading-text-align;
+}
+
+#disclosure {
+  display: block;
+  font-size: $font-size-sm;
+}
+
+/* ==========================================
+* OFFER STYLES */
+
+.cardFront {
+  img:not(.cardLogo) {
+    width: 92%;
+  }
+}
+
+/* ==========================================
+* OTHER SECTION STYLES */
+
+section {
+  padding: 1rem 0;
+}
+
+#terminate {
+  button {
+    margin-top: 3rem;
+  }
+}
+
+/* ==========================================
+* VALIDATION STYLES */
+
+//.col-form-label {
+//  padding: $input-label-padding-y $input-label-padding-x !important;
+//  font-size: $input-label-size !important;
+//  color: $input-label-color;
+//  text-transform: $input-label-text-transform;
+//  font-weight: $input-label-font-weight;
+//}
+
+.form-group.is-invalid {
+  .form-check-label {
+    color: $form-feedback-invalid-color;
+  }
+  input:not(.ng-valid):not([type=radio]):not([type=checkbox]),
+  select:not(.ng-valid),
+  textarea:not(.ng-valid) {
+    border-color: $form-feedback-invalid-color;
+  }
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+input.ng-valid:not([type=radio]):not([type=checkbox]),
+textarea.ng-valid {
+  border-color: $form-feedback-valid-color;
+}
+
+.form-group:not(.is-invalid) {
+  .form-check-label {
+    color: $form-feedback-valid-color;
+  }
+}
+
+input:checked + .toggle {
+  &:before {
+    left: -3px;
+  }
+  &:after {
+    position: absolute;
+    content: "Yes";
+    left: 10px;
+    color: $gray-500;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+/* ==========================================
+* TOGGLE STYLES */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 0px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: -4px;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  background-color: $white;
+  border: 1px solid $gray-500;
+  -webkit-transition: .4s;
+  transition: .4s;
+  font-size: 1rem;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: -9px;
+    bottom: -11px;
+    background-color: $gray-500;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: none;
+  }
+  &:after {
+    position: absolute;
+    content: "No";
+    bottom: 6px !important;
+    right: 11px;
+    color: $gray-500;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  &.round {
+    background: #fafafa;
+    border-radius: 0;
+    border: 1px solid #d3d3d3;
+    box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+#irPurchaseToggle {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  .col-form-label {
+    //top: 7px;
+    //margin: 0px 10px 16px;
+    text-transform: none;
+    &:first-child {
+      //padding-left: 25px;
+      //text-align: right;
+    }
+    &:last-child {
+      padding-right: 25px;
+      text-align: left;
+    }
+  }
+  .switch {
+    margin: 0 9px 0.5rem;
+  }
+  .toggle {
+    &:after, &:before {
+      content: '';
+    }
+    &:before {
+      background-color: #999;
+    }
+  }
+}
+
+
+/* ==========================================
+* SSN SHOW/HIDE STYLES */
+
+input[name=hideSsn].showhidessn {
+  text-security: disc;
+  -webkit-text-security: disc;
+  -moz-text-security: disc;
+}
+input[name=viewSsn].showhidessn {
+  text-security: none;
+  -webkit-text-security: none;
+  -moz-text-security: none;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background: $gray-300;
+}
+
+/* ==========================================
+* TOOLTIP STYLES */
+
+em.abbr {
+  color: #ed1951;
+  font: 16px/0px $font-family-base;
+  vertical-align: middle;
+  border: 0 none;
+}
+
+.backBtn {
+  position: relative;
+  fa-icon {
+    position: absolute;
+    left: 20px;
+  }
+}
