@@ -1,4 +1,4 @@
-# xp
+# EXP-BIS-T4C
 
 ## For Experian Text4Credit
 [Design](https://jeoffreybatangan.design/experian-bis-text4credit)
